@@ -214,12 +214,39 @@
 
     <section class="button-confirm">
       <div class="container">
-        <button class="no-button-confirm" id="button-confirm" onclick="confirmarCompra()">
+        <button
+          class="no-button-confirm"
+          id="button-confirm"
+          onclick="confirmarCompra()"
+        >
           Selecione os 3 itens <br />
           para fechar o pedido
         </button>
       </div>
     </section>
+
+    <div class="pop-up">
+      <h2>Confirme seu pedido</h2>
+      <div class="lista-pedido">
+        <div class="nome-pedido">
+          <p>Frango Yin Yang</p>
+          <p>Coquinha gelada</p>
+          <p>Pudim</p>
+        </div>
+        <div class="preco-pedido">
+          <p>14,90</p>
+          <p>4,90</p>
+          <p>7,90</p>
+        </div>
+      </div>
+      <div class="total-pedido">
+        <p>Total</p>
+        <p>R$ 27,70</p>
+      </div>
+
+      <button class="confirmar-pedido">Tudo certo, pode pedir!</button>
+      <p class="cancelar">Cancelar</p>
+    </div>
 
     <script src="./js/app.js"></script>
   </body>

@@ -11,7 +11,7 @@ var menu_price = {
   title_dessert: "",
   price_dessert: "",
 };
-var isConfirm = [false,false,false];
+var isConfirm = [false, false, false];
 
 function handleDish(el) {
   const prato = document.getElementById(el);
@@ -64,9 +64,8 @@ function isComfirmButton() {
     return true;
   }
 
-  return false
+  return false;
 }
-
 
 function confirmarCompra() {
   if (isComfirmButton()) {
