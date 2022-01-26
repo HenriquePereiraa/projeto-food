@@ -1,8 +1,7 @@
 const pratos = document.getElementsByClassName("prato");
 const bebidas = document.getElementsByClassName("bebida");
 const sobremesas = document.getElementsByClassName("sobremesa");
-const buttonConfirm = document.getElementById("button-confirm")
-console.log(buttonConfirm)
+const buttonConfirm = document.getElementById("button-confirm");
 
 var menu_price = {
   title_dish: "",
@@ -12,13 +11,13 @@ var menu_price = {
   title_dessert: "",
   price_dessert: "",
 };
-var isConfirm = false;
-let count = 0;
+var isConfirm = [false,false,false];
 
 function handleDish(el) {
   const prato = document.getElementById(el);
   menu_price.title_dish = prato.childNodes[3].childNodes[1].innerHTML;
   menu_price.price_dish = prato.childNodes[3].childNodes[5].innerHTML;
+  isConfirm[0] = true;
   for (let i = 0; i < pratos.length; i++) {
     if (pratos[i].id === el) {
       prato.classList.add("border");
@@ -26,13 +25,14 @@ function handleDish(el) {
       pratos[i].classList.remove("border");
     }
   }
-  count++;
+  isComfirmButton();
 }
 
 function handleDrink(el) {
   const bebida = document.getElementById(el);
   menu_price.title_drink = bebida.childNodes[3].childNodes[1].innerHTML;
   menu_price.price_drink = bebida.childNodes[3].childNodes[5].innerHTML;
+  isConfirm[1] = true;
   for (let i = 0; i < pratos.length; i++) {
     if (bebidas[i].id === el) {
       bebida.classList.add("border");
@@ -40,13 +40,14 @@ function handleDrink(el) {
       bebidas[i].classList.remove("border");
     }
   }
-  count++;
+  isComfirmButton();
 }
 
 function handleDessert(el) {
   const sobremesa = document.getElementById(el);
   menu_price.title_dessert = sobremesa.childNodes[3].childNodes[1].innerHTML;
   menu_price.price_dessert = sobremesa.childNodes[3].childNodes[5].innerHTML;
+  isConfirm[2] = true;
   for (let i = 0; i < pratos.length; i++) {
     if (sobremesas[i].id === el) {
       sobremesa.classList.add("border");
@@ -54,18 +55,21 @@ function handleDessert(el) {
       sobremesas[i].classList.remove("border");
     }
   }
-  count++;
+  isComfirmButton();
 }
 
-function confirmado() {
-    if(count === 3) {
-        console.log("pode confirmar")
-    }
+function isComfirmButton() {
+  if (isConfirm[0] === true && isConfirm[1] === true && isConfirm[2] === true) {
+    buttonConfirm.classList.add("bg-confirm");
+    return true;
+  }
+
+  return false
 }
 
 
 function confirmarCompra() {
-  if (count === 3) {
+  if (isComfirmButton()) {
     console.log(menu_price);
   } else {
     alert("complete o seu cardapio");

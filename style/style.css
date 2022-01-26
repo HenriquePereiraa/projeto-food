@@ -99,8 +99,8 @@ body {
   cursor: pointer;
 }
 
-.border{
-  border:6px solid #32B72F; 
+.border {
+  border: 6px solid #32b72f;
 }
 
 .card__prato img {
@@ -151,6 +151,11 @@ body {
   color: white;
   cursor: pointer;
   border: none;
+}
+
+.bg-confirm {
+  background-color: #32b72f;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
