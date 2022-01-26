@@ -31,7 +31,11 @@
       <div class="container">
         <h1 class="partos__title">Primeiro, seu prato</h1>
         <div class="cards">
-          <div class="card__prato">
+          <div
+            class="card__prato prato"
+            id="hamburger"
+            onclick="handleDish(id)"
+          >
             <img src="./images/hamburger.png" alt="hamburger de carne" />
             <div class="card__info">
               <h3 class="card__parto-title">Hamburger</h3>
@@ -41,7 +45,7 @@
           </div>
           <!--card__prato-->
 
-          <div class="card__prato">
+          <div class="card__prato prato" id="salada" onclick="handleDish(id)">
             <img src="./images/salada.png" alt="salada" />
             <div class="card__info">
               <h3 class="card__parto-title">Salada</h3>
@@ -53,7 +57,7 @@
           </div>
           <!--card__prato-->
 
-          <div class="card__prato">
+          <div class="card__prato prato" id="frango" onclick="handleDish(id)">
             <img
               src="./images/frango_yin_yang.png"
               alt="prato frango yin yang"
@@ -68,7 +72,11 @@
           </div>
 
           <!--card__prato-->
-          <div class="card__prato">
+          <div
+            class="card__prato prato"
+            id="kookaburra"
+            onclick="handleDish(id)"
+          >
             <img src="./images/kookaburra_wings.jpg" alt="Kookaburra Wings" />
             <div class="card__info">
               <h3 class="card__parto-title">Kookaburra Wings</h3>
@@ -86,7 +94,7 @@
       <div class="container">
         <h1 class="partos__title">Agora, sua bebida</h1>
         <div class="cards">
-          <div class="card__prato">
+          <div class="card__prato bebida" id="coca" onclick="handleDrink(id)">
             <img src="./images/coquinha_gelada.png" alt="Coquinha gelada" />
             <div class="card__info">
               <h3 class="card__parto-title">Coquinha gelada</h3>
@@ -96,7 +104,11 @@
           </div>
 
           <!--card__prato-->
-          <div class="card__prato">
+          <div
+            class="card__prato bebida"
+            id="milkSake"
+            onclick="handleDrink(id)"
+          >
             <img src="./images/milk-shake.png" alt="Milk Shake" />
             <div class="card__info">
               <h3 class="card__parto-title">Milk Shake</h3>
@@ -106,7 +118,7 @@
           </div>
           <!--card__prato-->
 
-          <div class="card__prato">
+          <div class="card__prato bebida" id="suco" onclick="handleDrink(id)">
             <img src="./images/suco.png" alt="Suco de Uva " />
             <div class="card__info">
               <h3 class="card__parto-title">Suco de Uva</h3>
@@ -116,7 +128,7 @@
           </div>
           <!--card__prato-->
 
-          <div class="card__prato">
+          <div class="card__prato bebida" id="h2o" onclick="handleDrink(id)">
             <img src="./images/h20.png" alt="H2O Limão" />
             <div class="card__info">
               <h3 class="card__parto-title">H2O Limão</h3>
@@ -134,7 +146,11 @@
       <div class="container">
         <h1 class="partos__title">Por fim, sua sobremesa</h1>
         <div class="cards">
-          <div class="card__prato">
+          <div
+            class="card__prato sobremesa"
+            id="pudim"
+            onclick="handleDessert(id)"
+          >
             <img src="./images/pudim.png" alt="pudim" />
             <div class="card__info">
               <h3 class="card__parto-title">Pudim</h3>
@@ -144,7 +160,11 @@
           </div>
 
           <!--card__prato-->
-          <div class="card__prato">
+          <div
+            class="card__prato sobremesa"
+            id="sundae"
+            onclick="handleDessert(id)"
+          >
             <img
               src="./images/sundae-ovomaltine.png"
               alt="Sundae de Ovomaltine"
@@ -157,7 +177,11 @@
           </div>
           <!--card__prato-->
 
-          <div class="card__prato">
+          <div
+            class="card__prato sobremesa"
+            id="brownie"
+            onclick="handleDessert(id)"
+          >
             <img src="./images/brownie.png" alt="Brownie" />
             <div class="card__info">
               <h3 class="card__parto-title">Brownie</h3>
@@ -167,8 +191,15 @@
           </div>
 
           <!--card__prato-->
-          <div class="card__prato">
-            <img src="./images/casquinha-recheada.png" alt="Casquinha recheada" />
+          <div
+            class="card__prato sobremesa"
+            id="casquinhaRecheada"
+            onclick="handleDessert(id)"
+          >
+            <img
+              src="./images/casquinha-recheada.png"
+              alt="Casquinha recheada"
+            />
             <div class="card__info">
               <h3 class="card__parto-title">Casquinha recheada</h3>
               <p class="card__prato-info">De doce de leite</p>
@@ -183,11 +214,13 @@
 
     <section class="button-confirm">
       <div class="container">
-        <button class="no-button-confirm">
+        <button class="no-button-confirm" id="button-confirm" onclick="confirmarCompra()">
           Selecione os 3 itens <br />
           para fechar o pedido
         </button>
       </div>
     </section>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>
