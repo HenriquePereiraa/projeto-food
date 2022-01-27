@@ -22,12 +22,12 @@
   <body>
     <header class="header">
       <div class="container">
-        <h1 class="header__title">DrivenEats</h1>
+        <h1 class="header__title">Henrique Eats</h1>
         <p class="header__subtitle">Sua comida em 6 minutos</p>
       </div>
     </header>
 
-    <section class="pratos">
+    <section class="pratos" data-identifier="dishes">
       <div class="container">
         <h1 class="partos__title">Primeiro, seu prato</h1>
         <div class="cards">
@@ -35,35 +35,46 @@
             class="card__prato prato"
             id="hamburger"
             onclick="handleDish(id)"
+            data-identifier="food-option"
           >
             <img src="./images/hamburger.png" alt="hamburger de carne" />
             <div class="card__info">
               <div class="check-dish">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Hamburger</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Hamburger</h3>
               <p class="card__prato-info">pão, ovo, carne e salada</p>
-              <p class="preco">R$ 16,90</p>
+              <p class="preco" data-identifier="food-price">R$ 16,90</p>
             </div>
           </div>
           <!--card__prato-->
 
-          <div class="card__prato prato" id="salada" onclick="handleDish(id)">
+          <div
+            class="card__prato prato"
+            id="salada"
+            onclick="handleDish(id)"
+            data-identifier="food-option"
+          >
             <img src="./images/salada.png" alt="salada" />
             <div class="card__info">
               <div class="check-dish">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Salada</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Salada</h3>
               <p class="card__prato-info">
                 Um pouco de batata, um pouco de salada
               </p>
-              <p class="preco">R$ 10,50</p>
+              <p class="preco" data-identifier="food-price">R$ 10,50</p>
             </div>
           </div>
           <!--card__prato-->
 
-          <div class="card__prato prato" id="frango" onclick="handleDish(id)">
+          <div
+            class="card__prato prato"
+            id="frango"
+            onclick="handleDish(id)"
+            data-identifier="food-option"
+          >
             <img
               src="./images/frango_yin_yang.png"
               alt="prato frango yin yang"
@@ -72,11 +83,11 @@
               <div class="check-dish">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Frango Yin Yang</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Frango Yin Yang</h3>
               <p class="card__prato-info">
                 Um pouco de batata, um pouco de salada
               </p>
-              <p class="preco">R$ 14,90</p>
+              <p class="preco" data-identifier="food-price">R$ 14,90</p>
             </div>
           </div>
 
@@ -85,15 +96,16 @@
             class="card__prato prato"
             id="kookaburra"
             onclick="handleDish(id)"
+            data-identifier="food-option"
           >
             <img src="./images/kookaburra_wings.jpg" alt="Kookaburra Wings" />
             <div class="card__info">
               <div class="check-dish">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Kookaburra Wings</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Kookaburra Wings</h3>
               <p class="card__prato-info">Frango empanado com um blend</p>
-              <p class="preco">R$ 29,90</p>
+              <p class="preco" data-identifier="food-price">R$ 29,90</p>
             </div>
           </div>
           <!--card__prato-->
@@ -102,19 +114,24 @@
     </section>
     <!--pratos-->
 
-    <section class="bebidas">
+    <section class="bebidas" data-identifier="drinks">
       <div class="container">
         <h1 class="partos__title">Agora, sua bebida</h1>
         <div class="cards">
-          <div class="card__prato bebida" id="coca" onclick="handleDrink(id)">
+          <div
+            class="card__prato bebida"
+            id="coca"
+            onclick="handleDrink(id)"
+            data-identifier="food-option"
+          >
             <img src="./images/coquinha_gelada.png" alt="Coquinha gelada" />
             <div class="card__info">
               <div class="check-drink">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Coquinha gelada</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Coquinha gelada</h3>
               <p class="card__prato-info">Lata 350ml</p>
-              <p class="preco">R$ 4,90</p>
+              <p class="preco" data-identifier="food-price">R$ 4,90</p>
             </div>
           </div>
 
@@ -123,41 +140,52 @@
             class="card__prato bebida"
             id="milkSake"
             onclick="handleDrink(id)"
+            data-identifier="food-option"
           >
             <img src="./images/milk-shake.png" alt="Milk Shake" />
             <div class="card__info">
               <div class="check-drink">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Milk Shake</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Milk Shake</h3>
               <p class="card__prato-info">Copo 350ml</p>
-              <p class="preco">R$ 11,90</p>
+              <p class="preco" data-identifier="food-price">R$ 11,90</p>
             </div>
           </div>
           <!--card__prato-->
 
-          <div class="card__prato bebida" id="suco" onclick="handleDrink(id)">
+          <div
+            class="card__prato bebida"
+            id="suco"
+            onclick="handleDrink(id)"
+            data-identifier="food-option"
+          >
             <img src="./images/suco.png" alt="Suco de Uva " />
             <div class="card__info">
               <div class="check-drink">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Suco de Uva</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Suco de Uva</h3>
               <p class="card__prato-info">Garrafa 350ml</p>
-              <p class="preco">R$ 9,90</p>
+              <p class="preco" data-identifier="food-price">R$ 9,90</p>
             </div>
           </div>
           <!--card__prato-->
 
-          <div class="card__prato bebida" id="h2o" onclick="handleDrink(id)">
+          <div
+            class="card__prato bebida"
+            id="h2o"
+            onclick="handleDrink(id)"
+            data-identifier="food-option"
+          >
             <img src="./images/h20.png" alt="H2O Limão" />
             <div class="card__info">
               <div class="check-drink">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">H2O Limão</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">H2O Limão</h3>
               <p class="card__prato-info">Garrafa 450ml</p>
-              <p class="preco">R$ 6,90</p>
+              <p class="preco" data-identifier="food-price">R$ 6,90</p>
             </div>
           </div>
           <!--card__prato-->
@@ -166,7 +194,7 @@
     </section>
     <!--bebida-->
 
-    <section class="bebidas pb-50">
+    <section class="sobremesas pb-50" data-identifier="desserts">
       <div class="container">
         <h1 class="partos__title">Por fim, sua sobremesa</h1>
         <div class="cards">
@@ -174,15 +202,16 @@
             class="card__prato sobremesa"
             id="pudim"
             onclick="handleDessert(id)"
+            data-identifier="food-option"
           >
             <img src="./images/pudim.png" alt="pudim" />
             <div class="card__info">
               <div class="check-dessert">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Pudim</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Pudim</h3>
               <p class="card__prato-info">Apenas pudim</p>
-              <p class="preco">R$ 7,90</p>
+              <p class="preco" data-identifier="food-price">R$ 7,90</p>
             </div>
           </div>
 
@@ -191,6 +220,7 @@
             class="card__prato sobremesa"
             id="sundae"
             onclick="handleDessert(id)"
+            data-identifier="food-option"
           >
             <img
               src="./images/sundae-ovomaltine.png"
@@ -200,9 +230,9 @@
               <div class="check-dessert">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Sundae Ovomaltine</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Sundae Ovomaltine</h3>
               <p class="card__prato-info">Ovomaltine</p>
-              <p class="preco">R$ 12,00</p>
+              <p class="preco" data-identifier="food-price">R$ 12,00</p>
             </div>
           </div>
           <!--card__prato-->
@@ -211,15 +241,16 @@
             class="card__prato sobremesa"
             id="brownie"
             onclick="handleDessert(id)"
+            data-identifier="food-option"
           >
             <img src="./images/brownie.png" alt="Brownie" />
             <div class="card__info">
               <div class="check-dessert">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Brownie</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Brownie</h3>
               <p class="card__prato-info">Brigadeiro</p>
-              <p class="preco">R$ 8,50</p>
+              <p class="preco" data-identifier="food-price">R$ 8,50</p>
             </div>
           </div>
 
@@ -228,6 +259,7 @@
             class="card__prato sobremesa"
             id="casquinhaRecheada"
             onclick="handleDessert(id)"
+            data-identifier="food-option"
           >
             <img
               src="./images/casquinha-recheada.png"
@@ -237,9 +269,9 @@
               <div class="check-dessert">
                 <img src="./images/check.png" alt="check" />
               </div>
-              <h3 class="card__parto-title">Casquinha recheada</h3>
+              <h3 class="card__parto-title" data-identifier="food-title">Casquinha recheada</h3>
               <p class="card__prato-info">De doce de leite</p>
-              <p class="preco">R$ 5,50</p>
+              <p class="preco" data-identifier="food-price">R$ 5,50</p>
             </div>
           </div>
           <!--card__prato-->
@@ -261,7 +293,7 @@
       </div>
     </section>
 
-    <div class="pop-up">
+    <div class="pop-up" data-identifier="confirmation-dialog">
       <h2>Confirme seu pedido</h2>
       <div class="lista-pedido">
         <div class="nome-pedido">
@@ -280,7 +312,9 @@
         <p>R$ 27,70</p>
       </div>
 
-      <button class="confirmar-pedido" onclick="pedir()">Tudo certo, pode pedir!</button>
+      <button class="confirmar-pedido" onclick="pedir()">
+        Tudo certo, pode pedir!
+      </button>
       <p class="cancelar" onclick="cancelarPedido()">Cancelar</p>
     </div>
 
