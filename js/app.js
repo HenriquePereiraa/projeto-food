@@ -2,6 +2,10 @@ const pratos = document.getElementsByClassName("prato");
 const bebidas = document.getElementsByClassName("bebida");
 const sobremesas = document.getElementsByClassName("sobremesa");
 const buttonConfirm = document.getElementById("button-confirm");
+const popUpConfirmation = document.querySelector(".pop-up");
+const overlay = document.querySelector(".overlay");
+
+console.log(popUpConfirmation);
 
 var menu_price = {
   title_dish: "",
@@ -69,8 +73,14 @@ function isComfirmButton() {
 
 function confirmarCompra() {
   if (isComfirmButton()) {
-    console.log(menu_price);
+    popUpConfirmation.style.display = "block";
+    overlay.style.display = "block";
   } else {
     alert("complete o seu cardapio");
   }
+}
+
+function cancelarPedido() {
+  popUpConfirmation.style.display = "none";
+  overlay.style.display = "none";
 }
