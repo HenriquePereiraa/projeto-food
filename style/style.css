@@ -54,6 +54,7 @@ body {
   background-color: #cf2b2b;
   color: #ffffff;
   padding: 10px 0;
+  z-index: 3;
 }
 
 .header__title {
@@ -103,7 +104,23 @@ body {
   border: 6px solid #32b72f;
 }
 
-.card__prato img {
+.card__info{
+  position: relative;
+}
+.check-dish, .check-drink, .check-dessert{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 130px;
+  width: 100%;
+}
+
+.check-dish > img, .check-drink > img, .check-dessert > img{
+ width: 16px;
+ height: 16px;
+}
+
+.card__prato > img {
   width: 144px;
   height: 87px;
 }
@@ -253,7 +270,7 @@ button.confirmar-pedido:hover{
 
 .overlay{
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
