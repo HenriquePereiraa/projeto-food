@@ -14,17 +14,15 @@ let somaPrecoTotal = 0;
 let nome;
 let endereço;
 
-
-var menu_price = [
+let menu_price = [
   { title: "", price: "" },
   { title: "", price: "" },
   { title: "", price: "" },
 ];
-var isConfirm = [false, false, false];
+let isConfirm = [false, false, false];
 
 function handleDish(el) {
   const prato = document.getElementById(el);
-  console.log(prato.childNodes[3].childNodes[3])
   menu_price[0].title = prato.childNodes[3].childNodes[3].innerHTML;
   menu_price[0].price = prato.childNodes[3].childNodes[7].innerHTML;
   isConfirm[0] = true;
@@ -98,8 +96,8 @@ function formatarConfimacaoPedido() {
 
 function confirmarCompra() {
   if (isComfirmButton()) {
-    nome = prompt("Infome seu nome: ")
-    endereço = prompt("informe seu endereço: (Rua, Bairro, Nº)")
+    nome = prompt("Infome seu nome: ");
+    endereço = prompt("informe seu endereço: (Rua, Bairro, Nº)");
     popUpConfirmation.style.display = "block";
     overlay.style.display = "block";
     formatarConfimacaoPedido();
@@ -108,21 +106,22 @@ function confirmarCompra() {
   }
 }
 
-function pedir(){
-  const mensage = 
-  `Olá, gostaria de fazer o pedido:
+function pedir() {
+  const mensage = `Olá, gostaria de fazer o pedido:
   - Prato: ${menu_price[0].title}
   - Bebida: ${menu_price[1].title}
   - Sobremesa: ${menu_price[2].title}
   Total: R$ ${somaPrecoTotal.toFixed(2)}
   
-  
-  Nome:${nome},
-  Endereço:${endereço}
-  `
+  Nome: ${nome},
+  Endereço: ${endereço}
+  `;
 
-  console.log(mensage)
-  window.open(`https://api.whatsapp.com/send?phone=5581986449427&text=${mensage}`)
+  window.open(
+    `https://api.whatsapp.com/send?phone=558183241681&text=${encodeURIComponent(
+      mensage
+    )}`
+  );
 }
 
 function cancelarPedido() {
